@@ -1,0 +1,39 @@
+.heading {
+  font-size: 2.5rem;
+  font-weight: 900; 
+}
+
+.leadership-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    position: relative;
+    padding: 80px 0;
+    clip-path: polygon(0 0, 100% 5%, 100% 95%, 0 100%);
+  }
+
+  /* Section title */
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+  }
+
+  .section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #007bff;
+    margin: 10px auto 0;
+    border-radius: 3px;
+  }
+
+  /* Card hover animation */
+  .team-card {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+
+  .team-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }

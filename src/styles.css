@@ -1,1 +1,204 @@
 /* You can add global styles to this file, and also import other style files */
+.carousel {
+  max-height: 400px;
+  overflow: hidden;
+}
+
+/* carousel */
+
+.animated-text {
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+.headline {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+  animation: pulseText 2s infinite;
+}
+
+.subtext {
+  font-size: 1.2rem;
+  color: #eee;
+  animation: fadeInUp 2s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseText {
+  0% {
+    transform: scale(1);
+    color: #fff;
+  }
+
+  50% {
+    transform: scale(1.05);
+    color: #00ffff;
+  }
+
+  100% {
+    transform: scale(1);
+    color: #fff;
+  }
+}
+
+/* Navbar link hover effect */
+.navbar-nav .nav-link {
+  position: relative;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #00ffff;
+  transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #00ffff;
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Navbar brand animation */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* space between logo and text */
+  padding: 0;
+  margin: 0;
+  font-weight: bold;
+  font-size: 1.5rem;
+  animation: pulseBrand 2s infinite;
+}
+
+.navbar-brand img {
+  height: 40px;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+}
+
+@keyframes pulseBrand {
+  0% {
+    transform: scale(1);
+    color: #ffffff;
+  }
+
+  50% {
+    transform: scale(1.05);
+    color: #00ffff;
+  }
+
+  100% {
+    transform: scale(1);
+    color: #ffffff;
+  }
+}
+
+/* Navbar background fade-in */
+.navbar {
+  animation: fadeInNavbar 1s ease-in-out;
+}
+
+@keyframes fadeInNavbar {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Carousel item active state */
+.carousel-item.active {
+  display: block;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: min 100vh;
+}
+
+/* Carousel caption */
+.carousel-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+}
+
+.carousel-caption .headline {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.carousel-caption .subtext {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+  .headline {
+    font-size: 2rem;
+  }
+
+  .subtext {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .headline {
+    font-size: 1.5rem;
+  }
+
+  .subtext {
+    font-size: 0.875rem;
+  }
+}
+
+.footer-link {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #00ffff;
+}
+
+.social-icons a {
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #00ffff;
+}
